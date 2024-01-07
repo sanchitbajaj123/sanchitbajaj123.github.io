@@ -7,6 +7,7 @@
   <title>PORTFOLIO</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
   <style>
     @keyframes slideInText {
       from {
@@ -19,16 +20,16 @@
       }
     }
     @keyframes slideout {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes changeText {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes changeText {
       0%, 100% {
         opacity: 1;
       }
@@ -38,7 +39,7 @@
       }
     }
     body {
-      padding-top: 56px; 
+      padding-top: 56px;
       margin: 0;
       background-color: #20232F;
       color: white;
@@ -46,26 +47,26 @@
     }
 
     nav.navbar {
-    background-color: #20232F;
-    animation: slideout 0.5s;
-     /* Change the color to your desired background color */
+      background-color: #20232F;
+      animation: slideout 0.5s;
     }
 
     nav.navbar a.nav-link {
-    color: white; /* Set the text color of the navigation links */
+      color: white;
     }
 
     nav.navbar a.nav-link:hover {
-    color: #0ef; /* Set the text color on hover */
+      color: #0ef;
     }
+
     nav.navbar a.nav-link:hover::after {
       content: "";
-      display:block;
+      display: block;
       height: 2px;
       width: 100%;
       background-color: #0ef;
-
     }
+
     section {
       position: relative;
       width: 100%;
@@ -77,15 +78,17 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 50px;
-      
     }
-    section#home div{
+
+    section#home div {
       animation: slideInText 4s;
     }
-    section#home div span{
+
+    section#home div span {
       animation: changeText 3s infinite alternate;
     }
-    section#home img{
+
+    section#home img {
       height: 500px;
       width: 35%;
       cursor: grab;
@@ -93,15 +96,20 @@
       transition: transform 0.3s ease-in-out;
     }
 
-    @media (max-width: 368px) {
+    @media (max-width: 768px) {
       section#home {
         flex-direction: column-reverse;
         align-items: center;
       }
+
       section#home div {
         margin-right: 0;
         text-align: center;
-        
+      }
+
+      section#home img {
+        width: 100%;
+        height: auto;
       }
     }
 
@@ -122,30 +130,53 @@
       max-width: 60%;
       text-align: left;
       padding: 80px;
-      
       border-radius: 3px;
     }
-    section#about div h1{
-      font-weight: bold; /* Make text bold */
-      font-size: 80px; /* Adjust the font size as needed */
+
+    section#about div h1 {
+      font-weight: bold;
+      font-size: 80px;
       margin-bottom: 40px;
     }
-    section#about img{
+
+    section#about img {
       height: 500px;
       width: auto;
     }
 
+    @media (max-width: 768px) {
+  section#about {
+    flex-direction: column-reverse;
+    align-items: center;
+    
+  }
+
+  section#about img {
+    order: 2; /* Move the image below the text */
+     
+  }
+
+  section#about div {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    min-width: 175%;
+    
+  }
+}
+
     section#projects {
-       /* Background color for the Projects section */
       padding: 50px 0;
       border-top-left-radius: 50% 20%;
       border-top-right-radius: 50% 20%;
     }
-    section#projects h1{
-        text-align: center;
-        color: #0ef;
-        margin-bottom: 50px;
+
+    section#projects h1 {
+      text-align: center;
+      color: #0ef;
+      margin-bottom: 50px;
     }
+
     .project-image {
       height: 200px;
       width: 100%;
@@ -154,22 +185,42 @@
       cursor: pointer;
       transition: transform 0.3s ease-in-out;
     }
-    
 
     .project-image:hover {
       transform: scale(1.1);
     }
-    span{
+
+    span {
       color: #0ef;
     }
-    section#contact h1{
+
+    section#contact h1 {
       text-align: center;
       color: #0ef;
       margin-bottom: 50px;
     }
-    section#contact div#s{
+
+    section#contact div#s {
       height: 40px;
-      
+    }
+
+    @media (max-width: 768px) {
+      section#projects h1,
+      section#contact h1 {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      .project-image {
+        height: 150px;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      section#contact div#s {
+        height: 30px;
+      }
     }
   </style>
 </head>
@@ -178,30 +229,30 @@
 
   <!-- Navigation Bar -->
   <header>
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <div class="navbar-brand">
-        SANCHIT BAJAJ
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <div class="navbar-brand">
+          SANCHIT BAJAJ
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
   <!-- Your Portfolio Content Goes Here -->
 
@@ -215,22 +266,23 @@
         Passionate CSE Student | Python Enthusiast | Future Software Developer in the Making 🚀<br>
       </p>
     </div>
-    
+
     <img src="img1.jpeg" alt="Profile Image" class="img-fluid">
   </section>
 
   <section id="about">
-    
-      <img src="img2.jpeg" alt="Profile Image" class="img-fluid">
-    
+
+    <img src="img2.jpeg" alt="Profile Image" class="img-fluid">
+
     <div>
-      
+
       <h3>
+        <p>
         I am a passionate and dedicated freelancer, specializing in software and full-stack development.<br>
         Currently pursuing my BTech degree at LPU, my journey in the field has been marked by excellence.<br>
         I am a Python enthusiast and had the honor of winning the state-level 2nd prize for my contribution to the innovative project 'Digi Park.'<br>
         This experience has fueled my enthusiasm for creating meaningful and impactful solutions in the world of technology.
-      </h3>
+      </h3></p>
     </div>
   </section>
 
@@ -256,55 +308,51 @@
       </div>
     </div>
   </section>
-  <!-- ... (previous code) ... -->
 
-<section id="contact">
-  <h1>Contact Me</h1>
-  <div class="container" id="s">
-    <div class="row">
-      <div class="col-md-6">
-        <h3>Follow me on social media:</h3>
-        <ul>
-          <li><a href="https://www.instagram.com/sanchit_.bajaj" target="_blank"><i class='bx bxl-instagram-alt' style='font-size: 5em;'></i></a></li>
-          <li><a href="https://www.youtube.com/channel/UCihD5L--fRw22jqQsFrrhkA" target="_blank"><i class='bx bxl-youtube' style='font-size: 5em;' ></i></a></li>
-          <li><a href="https://www.linkedin.com/in/sanchit-bajaj-977908283/" target="_blank"><i class='bx bxl-linkedin-square' style='font-size: 5em;' ></i></a></li>
-          <li><a href="https://github.com/sanchitbajaj123" target="_blank"><i class='bx bxl-github' style='font-size: 5em;' ></i></a></li>
-        </ul>
-      </div>
-      <div class="col-md-6">
-        <h3>Get in touch:</h3>
-        <!-- Add your contact form code here -->
-        <form action="https://api.web3forms.com/submit" method="post">
-          <input type="hidden" name="access_key" value="1a562657-bc02-4007-bc9a-c4ada2a53918">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" class="form-control" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-        <script src="https://web3forms.com/client/script.js" async defer></script>
+  <section id="contact">
+    <h1>Contact Me</h1>
+    <div class="container" id="s">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Follow me on social media:</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/sanchit_.bajaj" target="_blank"><i class='bx bxl-instagram-alt' style='font-size: 5em;'></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCihD5L--fRw22jqQsFrrhkA" target="_blank"><i class='bx bxl-youtube' style='font-size: 5em;' ></i></a></li>
+            <li><a href="https://www.linkedin.com/in/sanchit-bajaj-977908283/" target="_blank"><i class='bx bxl-linkedin-square' style='font-size: 5em;' ></i></a></li>
+            <li><a href="https://github.com/sanchitbajaj123" target="_blank"><i class='bx bxl-github' style='font-size: 5em;' ></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h3>Get in touch:</h3>
+          <!-- Add your contact form code here -->
+          <form action="https://api.web3forms.com/submit" method="post">
+            <input type="hidden" name="access_key" value="1a562657-bc02-4007-bc9a-c4ada2a53918">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+          <script src="https://web3forms.com/client/script.js" async defer></script>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ... (remaining code) ... -->
+  <!-- ... (remaining code) ... -->
 
 </body>
 
-
-  <!-- jQuery (Bootstrap JS plugins depend on it) -->
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
-
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
 
 </html>
