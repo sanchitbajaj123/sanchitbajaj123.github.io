@@ -112,6 +112,10 @@
         height: auto;
       }
     }
+    section#home img:hover{
+      transform: scale(1.1); /* Optionally, you can add a scale effect on hover */
+      box-shadow: 20px 20px 20px rgba(104, 7, 223, 0.3);
+    }
 
     section#about {
       background-color: #ffffff90;
@@ -143,6 +147,11 @@
       height: 500px;
       width: auto;
     }
+    section#about img:hover{
+      transform: scale(1.1); /* Optionally, you can add a scale effect on hover */
+      box-shadow: 20px 20px 20px rgba(104, 7, 223, 0.3);
+    }
+
 
     @media (max-width: 768px) {
   section#about {
@@ -227,6 +236,7 @@
 
 <body>
 
+  
   <!-- Navigation Bar -->
   <header>
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -256,6 +266,7 @@
 
   <!-- Your Portfolio Content Goes Here -->
 
+
   <section id="home" class="active">
     <div>
       <br>
@@ -267,12 +278,12 @@
       </p>
     </div>
 
-    <img src="img1.jpeg" alt="Profile Image" class="img-fluid">
+    <img src="img1.jpg" id="img1" alt="Profile Image" class="img-fluid">
   </section>
 
   <section id="about">
 
-    <img src="img2.jpeg" alt="Profile Image" class="img-fluid">
+    <img src="img2.jpeg" id="img2" alt="Profile Image" class="img-fluid">
 
     <div>
 
@@ -353,6 +364,6 @@
 
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
+
 
 </html>
